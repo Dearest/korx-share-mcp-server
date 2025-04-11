@@ -4,7 +4,7 @@ import { z } from "zod"
 export function createServer(): McpServer {
   const server = new McpServer({
     name: "Korx Share MCP Server",
-    version: "0.1.2",
+    version: "0.1.3",
   })
 
   server.tool(
@@ -48,13 +48,13 @@ export function createServer(): McpServer {
       const response = await fetch("https://korx.org/api/prompt", {
         method: "GET",
       })
-      const { prompt } = await response.json()
+      const prompt = await response.text()
 
       return {
         content: [
           {
             type: "text",
-            text: prompt,
+            text: JSON.stringify({ prompt }, null, 2),
           },
         ],
       }
