@@ -40,5 +40,26 @@ export function createServer(): McpServer {
     }
   )
 
+  server.tool(
+    "get_create_website_prompt",
+    "Retrieves a comprehensive prompt template designed to guide AI models in generating website code, providing structure and best practices for creating complete, functional web applications",
+    {},
+    async () => {
+      const response = await fetch("https://korx.org/api/prompt", {
+        method: "GET",
+      })
+      const { prompt } = await response.json()
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: prompt,
+          },
+        ],
+      }
+    }
+  )
+
   return server
 }
