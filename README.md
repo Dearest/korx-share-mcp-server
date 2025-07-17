@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/dearest-korx-share-mcp-server-badge.png)](https://mseep.ai/app/dearest-korx-share-mcp-server)
+
 # Korx Share MCP Server
 
 A powerful MCP (Multi-Client Protocol) server that integrates with [korx.org](https://korx.org)'s API to generate secure, shareable URLs for AI-created visual content. This server enables seamless sharing of charts, dashboards, and HTML pages while maintaining full interactivity and ensuring content safety through embedded risk sanitization.
